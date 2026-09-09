@@ -1,6 +1,7 @@
 > this will require py practice, ai stuff, etc. Lets see, good expanding my stack
 
 ### what i need to focus on
+- python
 - multimodal ai
 - agentic ai
 - building ai agents
@@ -14,6 +15,25 @@
 - ai security
 
 ---
+# py
+- syntax
+- Functions
+- Classes
+- Modules
+- Packages
+- Exceptions
+- Type hints
+- Lists / dicts / sets / tuples
+- Iterators / generators
+- async / await
+- Virtual environments
+- pip
+- JSON
+- HTTP/API clients
+- Basic testing
+- NumPy
+- Pandas
+- Jupyter
 
 # Artificial Intelligence
 
