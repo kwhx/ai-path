@@ -223,460 +223,86 @@
 
 ---
 
-```mermaid
-flowchart TD
-
-    START(["AI ENGINEER ROADMAP<br/>Complete Free Resource Map"])
-
-    START --> PY["PHASE 1 — PYTHON"]
-
-    subgraph PYTHON["Python Foundations + Engineering"]
-        PY1["CS50P — Harvard Intro to Programming with Python<br/>35h"]
-        PY2["Python Official Tutorial<br/>8h"]
-        PY3["Corey Schafer — Python OOP & Generators<br/>8h"]
-        PY4["Real Python — Generators / Iterators<br/>3h"]
-        PY5["Real Python — Async IO in Python<br/>3h"]
-        PY6["Python Docs — asyncio<br/>2h"]
-        PY7["Python Docs — venv<br/>1h"]
-        PY8["Corey Schafer — venv<br/>1h"]
-        PY9["pip Documentation<br/>1h"]
-        PY10["Automate the Boring Stuff with Python<br/>15h"]
-        PY11["Python Official Library Docs<br/>3h"]
-        PY12["Real Python — Regex Guide<br/>3h"]
-        PY13["Real Python — Threading<br/>3h"]
-        PY14["Python Docs — threading<br/>1h"]
-        PY15["Python Docs — sqlite3<br/>3h"]
-        PY16["Corey Schafer — SQLite<br/>3h"]
-        PY17["Python Docs — json<br/>1h"]
-        PY18["Real Python — Python requests<br/>3h"]
-        PY19["Real Python — Testing in Python<br/>3h"]
-        PY20["Python Docs — unittest<br/>1h"]
-        PY21["NumPy Official Quickstart<br/>3h"]
-        PY22["Keith Galli — NumPy<br/>3h"]
-        PY23["Pandas — 10 Minutes to pandas<br/>2h"]
-        PY24["Data School — Pandas<br/>8h"]
-        PY25["Corey Schafer — Pandas<br/>5h"]
-        PY26["Official Jupyter Docs<br/>2h"]
-        PY27["Corey Schafer — Jupyter<br/>2h"]
-        PY28["Matplotlib Official Tutorials<br/>4h"]
-        PY29["Seaborn Official Tutorial<br/>2h"]
-        PY30["Corey Schafer — Matplotlib<br/>4h"]
-        PY31["scikit-learn Official Tutorials<br/>8h"]
-        PY32["freeCodeCamp — scikit-learn<br/>6h"]
-    end
-
-    PY --> PY1
-    PY1 -.-> PY2
-    PY1 --> PY3
-    PY3 -.-> PY4
-    PY3 --> PY5
-    PY5 -.-> PY6
-    PY1 --> PY7
-    PY7 --> PY8
-    PY7 --> PY9
-    PY1 --> PY10
-    PY1 --> PY11
-    PY1 --> PY12
-    PY1 --> PY13
-    PY13 -.-> PY14
-    PY1 --> PY15
-    PY15 -.-> PY16
-    PY1 --> PY17
-    PY1 --> PY18
-    PY1 --> PY19
-    PY19 -.-> PY20
-    PY1 --> PY21
-    PY21 -.-> PY22
-    PY1 --> PY23
-    PY23 --> PY24
-    PY23 -.-> PY25
-    PY1 --> PY26
-    PY26 -.-> PY27
-    PY1 --> PY28
-    PY28 --> PY29
-    PY28 -.-> PY30
-    PY1 --> PY31
-    PY31 -.-> PY32
-
-    PY10 --> PYPROJECT["PYTHON PROJECT<br/>CLI → CSV → Pandas Cleaning → SQLite → FastAPI/Flask → pytest<br/>8h"]
-
-    PYPROJECT --> CLASSICAL
-
-    CLASSICAL["PHASE 2 — CLASSICAL / SYMBOLIC AI"]
-
-    subgraph AI["Classical / Symbolic AI"]
-        AI1["CS50's Introduction to AI with Python<br/>25h"]
-        AI2["Berkeley CS188 — Intro to AI<br/>25h"]
-        AI3["MIT 6.034 Artificial Intelligence — Patrick Winston<br/>20h"]
-        AI4["GeeksforGeeks — AO* Search<br/>1h"]
-        AI5["GeeksforGeeks — Water Jug<br/>1h"]
-        AI6["GeeksforGeeks — Monkey & Banana<br/>1h"]
-        AI7["GeeksforGeeks — Block Words<br/>1h"]
-    end
-
-    CLASSICAL --> AI1
-    AI1 --> AI2
-    AI1 --> AI3
-    AI2 --> AI3
-    AI3 --> AI4
-    AI2 --> AI5
-    AI2 --> AI6
-    AI2 --> AI7
-
-    AI5 --> AIPROJECT["CLASSICAL AI PROJECT<br/>Water Jug + Monkey & Banana<br/>BFS → A* from scratch<br/>8h"]
-
-    AIPROJECT --> ML
-
-    ML["PHASE 3 — MACHINE LEARNING"]
-
-    subgraph MACHINELEARNING["Classical ML + Theory"]
-        ML1["Andrew Ng — Machine Learning Specialization<br/>45h"]
-        ML2["StatQuest with Josh Starmer<br/>15h"]
-        ML3["GeeksforGeeks — Apriori / Association Rule Mining<br/>2h"]
-        ML4["GeeksforGeeks — Curse of Dimensionality<br/>1h"]
-        ML5["GeeksforGeeks — Semi-Supervised Learning<br/>1h"]
-        ML6["David Silver — Reinforcement Learning Course<br/>15h"]
-        ML7["Hugging Face — Deep RL Course<br/>10h"]
-        ML8["Probabilistic Graphical Models Specialization — Daphne Koller<br/>30h"]
-        ML9["Stanford CS228 Lecture Notes<br/>15h"]
-        ML10["StatQuest — Classical ML Metrics<br/>4h"]
-    end
-
-    ML --> ML1
-    ML1 --> ML2
-    ML2 --> ML3
-    ML2 --> ML4
-    ML1 --> ML5
-    ML1 --> ML6
-    ML6 -.-> ML7
-    ML1 --> ML8
-    ML8 -.-> ML9
-    ML2 --> ML10
-
-    ML1 --> MLPROJECT["ML PROJECT<br/>Decision Tree + Naive Bayes + K-Means + PCA<br/>Confusion Matrix + F1 + ROC-AUC<br/>10h"]
-
-    MLPROJECT --> DL
-
-    DL["PHASE 4 — DEEP LEARNING"]
-
-    subgraph DEEPLEARNING["Deep Learning"]
-        DL1["3Blue1Brown — Neural Networks<br/>5h"]
-        DL2["Andrej Karpathy — Neural Networks: Zero to Hero<br/>25h"]
-        DL3["Stanford CS231n — CNNs<br/>25h"]
-        DL4["Stanford CS224n — NLP with Deep Learning<br/>25h"]
-        DL5["Karpathy — Let's Build GPT from Scratch<br/>12h"]
-        DL6["MIT 6.S191 — Introduction to Deep Learning<br/>12h"]
-        DL7["Deep Learning Specialization — Andrew Ng<br/>40h"]
-        DL8["fast.ai — Practical Deep Learning for Coders<br/>20h"]
-    end
-
-    DL --> DL1
-    DL1 --> DL2
-    DL2 --> DL3
-    DL2 --> DL4
-    DL2 --> DL5
-    DL3 --> DL6
-    DL4 --> DL6
-    DL1 --> DL7
-    DL7 --> DL8
-
-    DL3 --> DLPROJECT["DL PROJECT<br/>CNN on CIFAR-10/MNIST from scratch<br/>→ Fine-tune pretrained model<br/>→ Compare<br/>12h"]
-
-    DLPROJECT --> CVNLP
-
-    CVNLP["PHASE 5 — COMPUTER VISION + NLP"]
-
-    subgraph VISIONLANG["Computer Vision"]
-        CV1["Stanford CS231n<br/>25h"]
-        CV2["Hugging Face Computer Vision Course<br/>15h"]
-        CV3["PyImageSearch — OCR Tutorials<br/>5h"]
-        CV4["Tesseract<br/>2h"]
-        CV5["EasyOCR<br/>2h"]
-    end
-
-    subgraph NLP["Natural Language Processing"]
-        NLP1["Stanford CS224n<br/>25h"]
-        NLP2["Hugging Face NLP Course<br/>20h"]
-        NLP3["spaCy Course<br/>8h"]
-    end
-
-    CVNLP --> CV1
-    CV1 --> CV2
-    CV2 --> CV3
-    CV3 --> CV4
-    CV3 --> CV5
-
-    CVNLP --> NLP1
-    NLP1 --> NLP2
-    NLP2 --> NLP3
-
-    CV2 --> CVNLPPROJECT["CV/NLP PROJECT<br/>Fine-tune DistilBERT for text classification<br/>+ OCR scanned image<br/>+ classify extracted text<br/>12h"]
-
-    NLP2 --> CVNLPPROJECT
-
-    CVNLPPROJECT --> GENAI
-
-    GENAI["PHASE 6 — GENERATIVE AI"]
-
-    subgraph GENERATIVE["Generative AI"]
-        GEN1["Karpathy — Let's Build GPT from Scratch<br/>12h"]
-        GEN2["Google — Generative AI Learning Path<br/>10h"]
-        GEN3["Hugging Face — Diffusion Models Course<br/>10h"]
-        GEN4["DeepLearning.AI — Fine-Tuning / Efficient Fine-Tuning Short Courses<br/>6h"]
-        GEN5["Microsoft — Generative AI for Beginners<br/>15h"]
-    end
-
-    GENAI --> GEN1
-    GEN1 --> GEN2
-    GEN1 --> GEN3
-    GEN2 --> GEN4
-    GEN4 --> GEN5
-
-    GEN1 --> GENPROJECT["GEN AI PROJECT<br/>Temperature + Top-p text generation<br/>+ Local diffusion model<br/>+ Observe denoising<br/>8h"]
-
-    GENPROJECT --> LLM
-
-    LLM["PHASE 7 — LLM ENGINEERING"]
-
-    subgraph LLMENG["LLM Engineering"]
-        LLM1["DeepLearning.AI / OpenAI — ChatGPT Prompt Engineering for Developers<br/>2h"]
-        LLM2["Anthropic — Prompt Engineering Interactive Tutorial<br/>4h"]
-        LLM3["DeepLearning.AI — Building Systems with the ChatGPT API<br/>2h"]
-        LLM4["DeepLearning.AI — Functions, Tools and Agents with LangChain<br/>3h"]
-        LLM5["Anthropic Academy<br/>8h"]
-        LLM6["Hugging Face — Open LLM Leaderboard<br/>1h"]
-        LLM7["Ollama Documentation<br/>2h"]
-        LLM8["Anthropic — Tool Use Documentation<br/>3h"]
-    end
-
-    LLM --> LLM1
-    LLM1 --> LLM2
-    LLM2 --> LLM3
-    LLM3 --> LLM4
-    LLM4 --> LLM8
-    LLM1 --> LLM5
-    LLM5 --> LLM6
-    LLM6 --> LLM7
-
-    LLM4 --> LLMPROJECT["LLM PROJECT<br/>Same task × 3 prompts<br/>Naive → Few-shot → Structured<br/>Compare real API outputs<br/>4h"]
-
-    LLMPROJECT --> EMB
-
-    EMB["PHASE 8 — EMBEDDINGS"]
-
-    subgraph EMBEDDINGS["Embeddings + Vector Search"]
-        EMB1["DeepLearning.AI — Vector Databases: from Embeddings to Applications<br/>1.5h"]
-        EMB2["DeepLearning.AI — Building Applications with Vector Databases<br/>2h"]
-        EMB3["Pinecone Learn<br/>4h"]
-        EMB4["Chroma<br/>2h"]
-    end
-
-    EMB --> EMB1
-    EMB1 --> EMB2
-    EMB2 --> EMB3
-    EMB3 --> EMB4
-
-    EMB4 --> EMBPROJECT["EMBEDDINGS PROJECT<br/>100 documents → embeddings → Chroma<br/>Raw cosine similarity / vector math<br/>→ Top-5 nearest neighbors<br/>6h"]
-
-    EMBPROJECT --> RAG
-
-    RAG["PHASE 9 — RAG"]
-
-    subgraph RAGENG["Retrieval-Augmented Generation"]
-        RAG1["DeepLearning.AI — Chat with Your Data<br/>2h"]
-        RAG2["DeepLearning.AI — Building Agentic RAG with LlamaIndex<br/>2h"]
-        RAG3["Pinecone Learn — RAG<br/>4h"]
-        RAG4["DeepLearning.AI — Building and Evaluating Advanced RAG<br/>3h"]
-        RAG5["LangChain<br/>3h"]
-        RAG6["LlamaIndex<br/>3h"]
-    end
-
-    RAG --> RAG1
-    RAG1 --> RAG2
-    RAG2 --> RAG3
-    RAG3 --> RAG4
-    RAG1 --> RAG5
-    RAG2 --> RAG6
-
-    RAG4 --> RAGPROJECT["RAG PROJECT<br/>PDF ingestion → parsing → chunking<br/>→ embedding → retrieval → generation<br/>→ citations<br/>→ test hallucination refusal<br/>12h"]
-
-    RAGPROJECT --> TOOLS
-
-    TOOLS["PHASE 10 — TOOL CALLING + MCP"]
-
-    subgraph MCP["Tool Calling & Model Context Protocol"]
-        TOOL1["DeepLearning.AI — Functions, Tools and Agents with LangChain<br/>3h"]
-        TOOL2["Anthropic — Tool Use Documentation<br/>3h"]
-        TOOL3["DeepLearning.AI — MCP: Build Rich-Context AI Apps with Anthropic<br/>2h"]
-        TOOL4["Anthropic Academy — Introduction to MCP<br/>3h"]
-        TOOL5["Anthropic Academy — MCP Advanced Topics<br/>4h"]
-        TOOL6["Hugging Face — MCP Course<br/>8h"]
-        TOOL7["Model Context Protocol — Official Specification<br/>3h"]
-    end
-
-    TOOLS --> TOOL1
-    TOOL1 --> TOOL2
-    TOOL2 --> TOOL3
-    TOOL3 --> TOOL4
-    TOOL4 --> TOOL5
-    TOOL5 --> TOOL6
-    TOOL6 --> TOOL7
-
-    TOOL7 --> MCPPROJECT["MCP PROJECT<br/>Custom MCP Server<br/>→ Local DB tool<br/>→ Connect to Claude<br/>→ Schemas + transport + permissions<br/>8h"]
-
-    MCPPROJECT --> AGENTS
-
-    AGENTS["PHASE 11 — AI AGENTS"]
-
-    subgraph AGENTENG["AI Agents"]
-        AG1["Hugging Face — Agents Course<br/>25h"]
-        AG2["DeepLearning.AI — AI Agentic Design Patterns<br/>4h"]
-        AG3["LangChain Academy — LangGraph<br/>8h"]
-        AG4["Anthropic — Building Effective Agents<br/>2h"]
-        AG5["Anthropic — Computer Use Documentation<br/>3h"]
-    end
-
-    AGENTS --> AG1
-    AG1 --> AG2
-    AG2 --> AG3
-    AG3 --> AG4
-    AG4 --> AG5
-
-    AG5 --> AGPROJECT["AGENT PROJECT<br/>Agent with 2–3 real tools<br/>Web search + calculator + file reader<br/>→ tool selection → multi-step execution<br/>→ deliberately break it → study failure modes<br/>10h"]
-
-    AGPROJECT --> MULTI
-
-    MULTI["PHASE 12 — MULTIMODAL AI"]
-
-    subgraph MULTIMODAL["Multimodal AI"]
-        MM1["DeepLearning.AI / Intel — Multimodal RAG: Chat with Videos<br/>2h"]
-        MM2["DeepLearning.AI / Weaviate — Building Multimodal Search and RAG<br/>2h"]
-        MM3["Hugging Face — Computer Vision Course<br/>15h"]
-        MM4["MIT 6.S191 — Gen AI / Multimodal Lecture<br/>2h"]
-        MM5["Whisper — OpenAI<br/>2h"]
-        MM6["Vision-Language Models<br/>5h"]
-    end
-
-    MULTI --> MM1
-    MM1 --> MM2
-    MM2 --> MM3
-    MM3 --> MM4
-    MM4 --> MM5
-    MM5 --> MM6
-
-    MM6 --> MMPROJECT["MULTIMODAL PROJECT<br/>Chat with my video<br/>Whisper transcription<br/>+ VLM frame captioning<br/>+ Vector store<br/>12h"]
-
-    MMPROJECT --> EVAL
-
-    EVAL["PHASE 13 — AI EVALUATION"]
-
-    subgraph EVALUATION["Evaluation + Observability"]
-        EV1["DeepLearning.AI — Evaluating AI Agents<br/>4h"]
-        EV2["Weights & Biases — LLM Apps / Evaluation<br/>3h"]
-        EV3["Arize — LLM Evaluation Basics<br/>1h"]
-        EV4["Evidently AI — LLM Evaluations Course<br/>3h"]
-        EV5["Arize Phoenix<br/>3h"]
-        EV6["Weights & Biases<br/>3h"]
-        EV7["StatQuest — Classical ML Metrics<br/>4h"]
-    end
-
-    EVAL --> EV1
-    EV1 --> EV2
-    EV2 --> EV3
-    EV3 --> EV4
-    EV4 --> EV5
-    EV5 --> EV6
-    EVAL --> EV7
-
-    EV1 --> EVPROJECT["EVALUATION PROJECT<br/>20 test questions<br/>Expected answers<br/>Retrieval hit-rate<br/>LLM-as-judge rubric<br/>Answer quality + hallucination testing<br/>8h"]
-
-    EVPROJECT --> SECURITY
-
-    SECURITY["PHASE 14 — AI SECURITY"]
-
-    subgraph AISEC["AI Security"]
-        SEC1["OWASP Top 10 for LLM Applications<br/>4h"]
-        SEC2["Gandalf — Lakera<br/>3h"]
-        SEC3["Simon Willison — Prompt Injection Series<br/>3h"]
-        SEC4["Anthropic Safety / Guardrails Documentation<br/>3h"]
-        SEC5["OpenAI Safety / Guardrails Documentation<br/>3h"]
-        SEC6["Learn Prompting — AI Red Teaming<br/>5h"]
-        SEC7["Anthropic Academy — MCP Security<br/>4h"]
-    end
-
-    SECURITY --> SEC1
-    SEC1 --> SEC2
-    SEC2 --> SEC3
-    SEC3 --> SEC4
-    SEC4 --> SEC5
-    SEC5 --> SEC6
-    SEC6 --> SEC7
-
-    SEC7 --> SECPROJECT["SECURITY PROJECT<br/>Attack your own RAG / Agent<br/>Malicious retrieved instruction<br/>→ Prompt injection<br/>→ Fix system<br/>→ Re-test<br/>8h"]
-
-    SECPROJECT --> INFRA
-
-    INFRA["PHASE 15 — AI INFRASTRUCTURE / MLOps"]
-
-    subgraph MLOPS["Infrastructure + Production"]
-        INF1["Full Stack Deep Learning<br/>25h"]
-        INF2["Made With ML — Goku Mohandas<br/>20h"]
-        INF3["Arize<br/>3h"]
-        INF4["Weights & Biases<br/>3h"]
-        INF5["Docker<br/>5h"]
-        INF6["FastAPI<br/>4h"]
-    end
-
-    INFRA --> INF1
-    INF1 --> INF2
-    INF2 --> INF3
-    INF3 --> INF4
-    INF4 --> INF5
-    INF5 --> INF6
-
-    INF6 --> FINALPROJECT["PRODUCTION PROJECT<br/>Take RAG / Agent system<br/>→ FastAPI service<br/>→ Docker<br/>→ Observability<br/>→ Evaluation<br/>→ Security<br/>→ Deploy<br/>15h"]
-
-    FINALPROJECT --> END(["AI ENGINEER<br/>Production-Ready Skill Stack"])
-
-    PY31 -.-> ML1
-    DL3 -.-> CV1
-    DL4 -.-> NLP1
-    DL5 -.-> GEN1
-    GEN1 -.-> LLM1
-    LLM4 -.-> TOOL1
-    EMB3 -.-> RAG3
-    RAG2 -.-> AG1
-    TOOL7 -.-> AG3
-    AG1 -.-> EV1
-    RAGPROJECT -.-> EVPROJECT
-    AGPROJECT -.-> EVPROJECT
-    RAGPROJECT -.-> SECPROJECT
-    AGPROJECT -.-> SECPROJECT
-    EVPROJECT -.-> FINALPROJECT
-    SECPROJECT -.-> FINALPROJECT
-
-    classDef phase fill:#111827,color:#ffffff,stroke:#374151,stroke-width:3px;
-    classDef resource fill:#f3f4f6,color:#111827,stroke:#6b7280;
-    classDef project fill:#fff7ed,color:#9a3412,stroke:#f97316,stroke-width:3px;
-    classDef startend fill:#111827,color:#ffffff,stroke:#ffffff,stroke-width:3px;
-
-    class PY,CLASSICAL,ML,DL,CVNLP,GENAI,LLM,EMB,RAG,TOOLS,AGENTS,MULTI,EVAL,SECURITY,INFRA phase;
-    class PY1,PY2,PY3,PY4,PY5,PY6,PY7,PY8,PY9,PY10,PY11,PY12,PY13,PY14,PY15,PY16,PY17,PY18,PY19,PY20,PY21,PY22,PY23,PY24,PY25,PY26,PY27,PY28,PY29,PY30,PY31,PY32 resource;
-    class AI1,AI2,AI3,AI4,AI5,AI6,AI7 resource;
-    class ML1,ML2,ML3,ML4,ML5,ML6,ML7,ML8,ML9,ML10 resource;
-    class DL1,DL2,DL3,DL4,DL5,DL6,DL7,DL8 resource;
-    class CV1,CV2,CV3,CV4,CV5,NLP1,NLP2,NLP3 resource;
-    class GEN1,GEN2,GEN3,GEN4,GEN5 resource;
-    class LLM1,LLM2,LLM3,LLM4,LLM5,LLM6,LLM7,LLM8 resource;
-    class EMB1,EMB2,EMB3,EMB4 resource;
-    class RAG1,RAG2,RAG3,RAG4,RAG5,RAG6 resource;
-    class TOOL1,TOOL2,TOOL3,TOOL4,TOOL5,TOOL6,TOOL7 resource;
-    class AG1,AG2,AG3,AG4,AG5 resource;
-    class MM1,MM2,MM3,MM4,MM5,MM6 resource;
-    class EV1,EV2,EV3,EV4,EV5,EV6,EV7 resource;
-    class SEC1,SEC2,SEC3,SEC4,SEC5,SEC6,SEC7 resource;
-    class INF1,INF2,INF3,INF4,INF5,INF6 resource;
-
-    class PYPROJECT,AIPROJECT,MLPROJECT,DLPROJECT,CVNLPPROJECT,GENPROJECT,LLMPROJECT,EMBPROJECT,RAGPROJECT,MCPPROJECT,AGPROJECT,MMPROJECT,EVPROJECT,SECPROJECT,FINALPROJECT project;
-    class START,END startend;
-```
+## master resource bank since theres no time for above bs:
+
+## TRACK A — Applied AI Engineer
+
+### 1. Python (refresher, not a course)
+| Resource | Covers |
+|---|---|
+| **[Real Python](https://realpython.com/)** (~15h, article-by-article, not the whole site) | syntax refresher, functions, classes/OOP, modules/packages, exceptions, type hints, lists/dicts/sets/tuples, iterators/generators, async/await, venv, pip, regex, threading, sqlite3/DB-API, JSON, HTTP/requests, testing (pytest) |
+| **[Python Data Science Handbook — Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/)** (free, full book online, ~15h skimmed) | NumPy, Pandas, Jupyter, Matplotlib, Seaborn, scikit-learn — all in one book, one author, consistent examples |
+
+### 2. Generative AI + LLM Engineering
+| Resource | Covers |
+|---|---|
+| **[Karpathy: Neural Networks — Zero to Hero](https://www.youtube.com/@AndrejKarpathy)** — just the micrograd + makemore + "Let's build GPT" videos (~15h) | LLM/transformer foundations, tokenization, sampling, from-scratch backprop |
+| **[Anthropic's Prompt Engineering Interactive Tutorial](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)** (~4h) | system instructions, role separation, structured prompting, few-shot, output constraints, reasoning strategies, prompt injection as a prompting concept |
+| **[Hugging Face NLP Course](https://huggingface.co/learn/nlp-course)** (~18h) | fine-tuning, distillation, classification, translation, language models, embeddings basics, hands-on with real models |
+| **[Hugging Face Diffusion Models Course](https://huggingface.co/learn/diffusion-course)** (~9h) | diffusion models, image generation, denoising |
+
+*Models landscape (OpenAI/Anthropic/Google/open-source/local) doesn't need a course — that's a 1h skim of the [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) + [Ollama docs](https://github.com/ollama/ollama) whenever you need it.*
+
+### 3. Embeddings + RAG
+| Resource | Covers |
+|---|---|
+| **[DeepLearning.AI: Vector Databases — from Embeddings to Applications](https://www.deeplearning.ai/short-courses/vector-databases-embeddings-applications/)** + **[Pinecone Learn](https://www.pinecone.io/learn/)** (~5h combined) | embedding models, cosine similarity, vector search, nearest-neighbor search, semantic search, vector DBs, indexing, chunking |
+| **[DeepLearning.AI: Building Agentic RAG with LlamaIndex](https://www.deeplearning.ai/short-courses/building-agentic-rag-with-llamaindex/)** (~2h) | document ingestion, parsing, chunking, embedding, retrieval, reranking, hybrid search, metadata filtering, agentic/multi-step RAG, citation, hallucination mitigation |
+
+*2 resources. Note: DLAI short courses run 1-2h each — they're dense, not padded.*
+
+### 4. Tool Calling + MCP
+| Resource | Covers |
+|---|---|
+| **[Anthropic Tool Use docs](https://docs.claude.com/en/docs/build-with-claude/tool-use/overview)** (~3h) | function calling, tool schemas, structured outputs, input validation, error handling, tool selection |
+| **[DeepLearning.AI: MCP — Build Rich-Context AI Apps with Anthropic](https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/)** (~2h) | MCP clients/servers, tools/resources/prompts, schemas, capability negotiation, transport, auth |
+
+*Keep [modelcontextprotocol.io](https://modelcontextprotocol.io/) bookmarked as the reference spec, not something you "study."*
+
+### 5. AI Agents
+| Resource | Covers |
+|---|---|
+| **[Hugging Face Agents Course](https://huggingface.co/learn/agents-course)** (~20h, you can skip redundant intro units) | tool use, planning, memory, multi-step workflows, evaluation, deployment, multi-agent systems |
+| **["Building Effective Agents" — Anthropic engineering blog](https://www.anthropic.com/research/building-effective-agents)** (~1h) | practical design patterns: when to use an agent vs. a workflow, reflection, orchestration, failure recovery |
+
+*For computer-use agents specifically, [Anthropic's computer-use docs](https://docs.claude.com/en/docs/agents-and-tools/tool-use/computer-use-tool) are a reference, not a course — read them when you build one.*
+
+### 6. Multimodal AI
+| Resource | Covers |
+|---|---|
+| **[Hugging Face Computer Vision Course](https://huggingface.co/learn/computer-vision-course)** (~12h, selective) | vision-language models, image/video understanding, document intelligence |
+| **[DeepLearning.AI: Multimodal RAG — Chat with Videos](https://www.deeplearning.ai/short-courses/multimodal-rag-chat-with-videos/)** (~2h) | Whisper speech transcription, VLM frame captioning, multimodal vector store — an actual working "chat with video" build |
+
+*OCR (Tesseract/EasyOCR) is a 1-2h tool-docs read when you need it, not a dedicated resource.*
+
+### 7. Evaluation
+| Resource | Covers |
+|---|---|
+| **[DeepLearning.AI: Evaluating AI Agents](https://learn.deeplearning.ai/courses/evaluating-ai-agents)** (~4h) | golden datasets, benchmark design, accuracy/relevance/groundedness/hallucination rate, regression testing, LLM-as-judge |
+
+*Classical metrics (confusion matrix, precision/recall/F1, ROC-AUC, cross-validation) are already covered by StatQuest in Track B's ML section — no second resource needed here.*
+
+### 8. AI Security
+| Resource | Covers |
+|---|---|
+| **[OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)** (~4h, living doc) | prompt injection, indirect injection, data poisoning, supply-chain risk, excessive agency, tool abuse, privilege escalation, sensitive-data handling — maps almost 1:1 to your entire security list |
+| **[Gandalf by Lakera](https://gandalf.lakera.ai/)** (~2h) | hands-on injection practice — actually attacking a system beats reading about it |
+
+*[Simon Willison's prompt injection series](https://simonwillison.net/series/prompt-injection/) is worth following as ongoing reading, not a one-time study item.*
+
+**Track A subtotal: 16 resources, ~118 hours.**
+
+---
+
+## TRACK B — Academic / Syllabus (Classical AI, ML theory, toy problems)
+
+| Resource | Covers |
+|---|---|
+| **[MIT 6.034 — Patrick Winston (OCW)](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/)** (~20h) | state-space search (BFS/DFS/A*, hill climbing, generate-and-test), CSP, adversarial search, propositional/predicate logic, resolution, clause form conversion, expert systems (MYCIN), procedural vs. declarative knowledge — covers nearly your whole Classical AI list in one course |
+| **AO\*, Water Jug, Monkey & Banana, Block Words** — these are practice problems, not lecture topics. Read the problem statement once (GeeksforGeeks has all four), then implement each yourself with BFS/A* from the Winston course. (~4h total, not a "resource" you study) |
+| **[Stanford CS228 lecture notes](https://ermongroup.github.io/cs228-notes/)** (free, no signup, ~12h) | Bayesian Networks, Markov Random Fields, HMM, directed graphical models, exploiting independence properties, distributions-to-graphs, inference — this single notes site is literally built around your exact PGM syllabus list |
+| **[StatQuest with Josh Starmer](https://www.youtube.com/@statquest)** (~12h, pick relevant videos) | decision trees, Naive Bayes, PCA, EM/GMM, curse of dimensionality, confusion matrix, precision/recall/F1, ROC-AUC, cross-validation — reused for Track A's Evaluation section too |
+| **[Andrew Ng: Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)** (audit free, ~30h) | supervised learning end-to-end (regression, NN, decision trees), unsupervised (k-means, anomaly detection), basic reinforcement learning |
+| **Association rule mining** — one [GeeksforGeeks read](https://www.geeksforgeeks.org/machine-learning/apriori-algorithm/) (~1h). It's a small enough topic that a dedicated course would be padding. |
+
+**Track B subtotal: 6 resources (~5 courses + 1 practice block), ~65 hours.**
