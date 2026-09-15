@@ -27,6 +27,7 @@
 - Iterators / generators
 - async / await
 - Virtual environments
+- regex, threading, direct DB connectivity (sqlite3/DB-API), scikit-learn
 - pip
 - JSON
 - HTTP/API clients
@@ -41,18 +42,26 @@
 ARTIFICIAL INTELLIGENCE
 │
 ├── Classical / Symbolic AI
-│   ├── Search
-│   ├── Planning
-│   ├── Logic
-│   ├── Knowledge representation
-│   └── Expert systems
-│
+│   ├── State-space search (BFS, DFS, A*, AO*, hill climbing)
+│   ├── Constraint satisfaction & problem reduction
+│   ├── Adversarial search / game playing
+│   ├── Propositional & predicate logic, resolution
+│   └── Expert systems (MYCIN)
+|    
 ├── Machine Learning
-│   ├── Supervised learning
-│   ├── Unsupervised learning
+├── Supervised learning         
+│   │   ├── Decision Trees, Naïve Bayes
+│   │   ├── Linear/Logistic/Bayesian Regression
+│   │   └── Feed-forward NN + backprop + regularization
+│   ├── Unsupervised learning        
+│   │   ├── K-Means, EM, GMM
+│   │   └── PCA, Factor Analysis, dimensionality reduction
 │   ├── Semi-supervised learning
 │   ├── Reinforcement learning
 │   └── Deep learning
+│   └── Probabilistic Graphical Models  
+│       ├── Bayesian Networks, Markov Random Fields
+│       └── Markov Models, HMM
 │
 ├── Deep Learning
 │   ├── Neural networks
@@ -106,6 +115,7 @@ ARTIFICIAL INTELLIGENCE
     ├── Model monitoring
     ├── Data pipelines
     └── Evaluation / observability
+      └── Classical ML metrics (confusion matrix, precision recall/F1, ROC-AUCcross-validation)
 ```
 
 ---
@@ -773,3 +783,35 @@ A capable AI engineer should eventually be able to answer:
 - How do we deploy and operate it reliably?
 
 The goal is to move from merely **using AI models** to **engineering AI systems**.
+
+---
+
+# Extra from Syllabi
+
+These are specific academic topics, toy problems, and classical theories required by the university syllabus that fall outside the modern Applied AI Engineering stack.
+
+## Python & Programming Fundamentals
+*   **File Handling & I/O:** File objects, built-in functions/methods/attributes, standard files, persistent storage modules, reading/writing text and CSV files.
+*   **Command-Line:** Command-line arguments (`sys.argv`).
+*   **Error Handling:** Assertions (as part of exception handling).
+*   **Standard Libraries:** `math` module, `datetime` module (for today/now calculations).
+*   **Data Visualization:** Matplotlib and Seaborn (specifically generating scatter plots, bar charts, and styled line plots).
+
+## Classical Artificial Intelligence
+*   **State-Space Search Problems:** 
+    *   Water Jug problem
+    *   Block words problem
+    *   Monkey & Banana problem
+*   **Search Strategies:** Generate-and-test heuristic search.
+*   **Knowledge Representation:** 
+    *   Definitions and differences between Procedural knowledge and Declarative knowledge.
+    *   Conversion to clause form (prerequisite for resolution in logic).
+
+## Machine Learning
+*   **Unsupervised Learning:** Association rule mining.
+*   **Theoretical Concepts:** The Curse of Dimensionality.
+*   **Probabilistic Graphical Models (Theory):** 
+    *   Directed Graphical Models
+    *   Exploiting Independence Properties
+    *   From Distributions to Graphs
+    *   Inference In Graphical Models

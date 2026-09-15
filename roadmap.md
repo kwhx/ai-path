@@ -1,6 +1,6 @@
 ```mermaid
 flowchart TD
-    A["Python"] --> B["AI Fundamentals"]
+    A["Python"] --> B["AI & ML Fundamentals"] --> X["Sem syllabi gets completed by now"]
     B --> C["Gen AI"]
     C --> D["LLM Engineering"]
 
